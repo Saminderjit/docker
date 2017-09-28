@@ -1,3 +1,5 @@
 sudo chown ubuntu:ubuntu jenkins_sandvine/
 sudo docker run -d  -p 8085:8085 -v /home/ubuntu/docker/jenkins_sandvine:/var/jenkins_home:z -t jenkins/jenkins
 sudo journalctl -u docker.service (for logs Ubuntu)
+sudo docker exec -it <cont_id> bash
+sudo docker run -d -p 8088:8080 -v /opt/:/opt -v /home/ubuntu/docker/docker/Jenkins/jenkins:/var/jenkins_home:z  -t jenkins_image
