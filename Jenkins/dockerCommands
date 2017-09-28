@@ -1,0 +1,3 @@
+sudo chown ubuntu:ubuntu jenkins_sandvine/
+sudo docker run -d  -p 8085:8085 -v /home/ubuntu/docker/jenkins_sandvine:/var/jenkins_home:z -t jenkins/jenkins
+sudo journalctl -u docker.service (for logs Ubuntu)
